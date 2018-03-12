@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OPACITY & NAVIGATION BAR</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			width: 25%;
+			background-color: #f1f1f1;
+			position: fixed;
+			height: 100%;
+			overflow: auto;
+
+		}
+		li a {
+			display: block;
+			color: #000;
+			padding: 8px 16px;
+			text-decoration: none;
+
+
+		}
+		li a.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+		li a:hover:not(.active) {
+    	background-color: #555;
+    	color: white;
+		}
+
+		img:hover {
+			opacity: 0.5;
+			filter: alpha(opacity=50);
+			/* for IE8 and earlier */
+		}
+		.background {
+			background:url(wxp.jpg) repeat;
+			border: 2px solid black;
+			background-position: center;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		.transbox {
+			margin: 30px;
+			background-color: #ffffff;
+			border: 1px solid black;
+			opacity: 0.6;
+			filter: alpha(opacity=60); 
+			/* for IBM and earlier */
+		}
+		.transbox p {
+			margin: 5%;
+			font-weight: bold;
+			color: #000000;
+			text-align: center;
+		}
+		div {
+    		
+    		padding: 10px;
+		}
+
+		div.first {
+    		opacity: 0.1;
+    		background-color: #4CAF50;
+    		filter: alpha(opacity=10); /* For IE8 and earlier */
+		}
+
+		div.second {
+    	opacity: 0.3;
+    	background-color: #4CAF50;
+    	filter: alpha(opacity=30); /* For IE8 and earlier */
+		}
+
+		div.third {
+    	opacity: 0.6;
+    	background-color: #4CAF50;
+    	filter: alpha(opacity=60); /* For IE8 and earlier */
+		}
+		.forth {
+			background-color: #4CAF50;
+		}
+
+	</style>
+</head>
+<body>
+
+	<!-- start navbar -->
+
+	<ul class="sindenav">
+		<li>
+			<a class="active" href="#home">Home</a>
+		</li>
+		<li><a href="#news">News</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#about">About</a></li>
+	</ul>
+
+	<!-- end navbar -->
+
+	<!-- start heading opacity -->
+
+	<div style="margin-left: 25%; padding: 1px 16px; height: 1000px;">
+	<div class="background">
+		<div class="transbox">
+			<p>ACTION OF THE WORLD</p>
+		</div>
+	</div>
+
+	<!-- end heading opacity -->
+	<h1>Image Transparency</h1>
+	<p>The opacity property is often used together with the :hover selector to change the opacity on mouse-over:</p>
+
+	<!-- start image opacity -->
+
+	<img src="2.jpg" width="300" height="150">
+	<img src="6.jpg" width="300" height="150">
+	<img src="8.jpg" width="300" height="150">
+
+	<!-- end image opacity -->
+
+	<p><b>Note:</b> In IE, a !DOCTYPE must be added for the :hover selector to work on other elements than the a element.</p><br>
+	<!-- start text opacity -->
+	<div class="first"><p>opacity 0.1</p></div>
+	<div class="second"><p>opacity 0.3</p></div>
+	<div class="third"><p>opacity 0.6</p></div>
+	<div class="forth"><p>opacity 1 (default)</p></div>
+	</div>
+	<!-- end text opacity -->
+
+</body>
+</html>
